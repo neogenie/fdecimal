@@ -1,6 +1,7 @@
 [package]
 name = "decimal"
 version = "0.0.1"
+edition = "2021"
 authors = ["Neo"]
 description = "Arbitrary precision fast decimal numbers"
 documentation = "https://docs.rs/decimal"
