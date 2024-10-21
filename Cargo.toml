@@ -1,0 +1,34 @@
+[package]
+name = "decimal"
+version = "0.0.1"
+authors = ["Neo"]
+description = "Arbitrary precision fast decimal numbers"
+documentation = "https://docs.rs/decimal"
+homepage = "https://github.com/neogenie/decimal.rs"
+repository = "https://github.com/neogenie/decimal.rs"
+keywords = [
+    "numeric",
+    "decimal",
+    "arbitrary-precision",
+]
+categories = [ "mathematics", "science", "no-std" ]
+license = "MIT"
+autobenches = false
+
+[lib]
+bench = false
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = [ "html_reports" ] }
+rstest = { version = "0.23.0" }
+
+[build-dependencies]
+autocfg = "1"
+
+[features]
+
+[[bench]]
+name = "benchmark"
+harness = false
