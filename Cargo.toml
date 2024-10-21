@@ -5,8 +5,8 @@ edition = "2021"
 authors = ["Neo"]
 description = "Arbitrary precision fast decimal numbers"
 documentation = "https://docs.rs/fdecimal"
-homepage = "https://github.com/neogenie/fdecimal.rs"
-repository = "https://github.com/neogenie/fdecimal.rs"
+homepage = "https://github.com/neogenie/fdecimal"
+repository = "https://github.com/neogenie/fdecimal"
 keywords = [
     "numeric",
     "decimal",

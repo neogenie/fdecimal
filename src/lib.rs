@@ -4,7 +4,7 @@
 //! avoids common floating point errors (such as 0.1 + 0.2 ≠ 0.3) at the
 //! cost of complexity.
 //!
-//! Internally, `Decimal` uses a `256-bit integer, paired with a 64-bit
+//! Internally, `Decimal` uses a 256-bit integer, paired with a 64-bit
 //! integer which determines the position of the decimal point. Therefore,
 //! the precision *is not* actually arbitrary, but limited to 2<sup>63</sup>
 //! decimal places.
@@ -18,7 +18,7 @@
 //! # Example
 //!
 //! ```
-//! use decimal::Decimal;
+//! use fdecimal::Decimal;
 //! use std::str::FromStr;
 //!
 //! let input = "0.8";
