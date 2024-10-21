@@ -1,12 +1,12 @@
 [package]
-name = "fdecimal"
-version = "0.0.2"
+name = "fastnum"
+version = "0.0.1"
 edition = "2021"
 authors = ["Neo"]
-description = "Arbitrary precision fast decimal numbers"
-documentation = "https://docs.rs/fdecimal"
-homepage = "https://github.com/neogenie/fdecimal"
-repository = "https://github.com/neogenie/fdecimal"
+description = "Fast numbers library"
+documentation = "https://docs.rs/fastnum"
+homepage = "https://github.com/neogenie/fastnum"
+repository = "https://github.com/neogenie/fastnum"
 keywords = [
     "numeric",
     "decimal",
@@ -15,11 +15,18 @@ keywords = [
 categories = [ "mathematics", "science", "no-std" ]
 license = "MIT"
 autobenches = false
+exclude = ["/src/*"]
 
 [lib]
 bench = false
 
 [dependencies]
+
+num-traits = { version = "0.2", default-features = false }
+
+serde = { version = ">= 1.0.0", default-features = false, optional = true }
+serde_json = { version = ">=0.8.0, <2.0", default-features = false, optional = true }
+diesel = { version = ">=2.2.4", default-features = false, optional = true }
 
 [dev-dependencies]
 criterion = { version = "0.5.1", features = [ "html_reports" ] }
@@ -29,6 +36,10 @@ rstest = { version = "0.23.0" }
 autocfg = "1"
 
 [features]
+default = ["std"]
+std = ["num-traits/std"]
+serde = ["dep:serde", "dep:serde_json"]
+diesel = ["dep:diesel"]
 
 [[bench]]
 name = "benchmark"
